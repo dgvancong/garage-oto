@@ -1,0 +1,79 @@
+/* Breadcrumb */
+.breadcrumb-item a {
+  color: #555;
+  text-decoration: none;
+}
+.breadcrumb-item.active {
+  color: #FFD700;
+}
+
+/* Màu vàng chung */
+.text-gold {
+  color: #FFD700 !important;
+}
+
+/* Nút vàng */
+.btn-gold {
+  background-color: #FFD700;
+  border: none;
+  color: #111;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn-gold:hover {
+  background-color: #e6c200; /* vàng đậm hơn khi hover */
+  color: #000;
+}
+
+/* Border vàng cho ảnh */
+.carousel-inner img {
+  border: 2px solid #FFD700;
+}
+
+.nav-tabs .nav-link {
+  font-weight: 600;
+  color: #111;
+  text-transform: uppercase;
+  margin: 0 5px;
+  transition: 0.3s;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #FFD700;
+  color: #111;
+  border: none;
+  border-radius: 5px 5px 0 0;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #FFD700;
+}
+
+.tab-content {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+table th {
+  width: 200px;
+  text-align: left;
+}
+
+table td {
+  text-align: left;
+}
+
+.bg-warning {
+  background-color: #FFD700 !important; /* vàng thay đỏ */
+}
+
+#features h6,
+#advantages h6 {
+  margin-top: 1rem;
+  color: #FFD700; /* vàng đồng bộ */
+}
+
+ul li::marker {
+  color: #FFD700;
+}

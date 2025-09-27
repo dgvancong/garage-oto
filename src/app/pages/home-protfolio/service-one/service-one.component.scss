@@ -1,0 +1,26 @@
+h2 {
+  color: #FFD700; /* vàng nổi bật */
+}
+
+.accordion-button {
+  font-weight: bold;
+}
+
+.accordion-body {
+  background: #f8f9fa;
+  border-radius: 5px;
+}
+
+/* Breadcrumb */
+.breadcrumb-item a {
+  color: #555;
+  text-decoration: none;
+}
+.breadcrumb-item.active {
+  color: #FFD700;
+}
+
+/* Màu vàng chung */
+.text-gold {
+  color: #FFD700 !important;
+}

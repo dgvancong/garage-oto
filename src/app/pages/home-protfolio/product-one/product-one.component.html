@@ -1,0 +1,225 @@
+<div class="container my-5">
+  <!-- Breadcrumb -->
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Trang chủ</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Màn Hình Ô Tô</li>
+    </ol>
+  </nav>
+
+  <div class="row justify-content-center">
+    <!-- Slider hình ảnh -->
+    <div class="col-lg-6 mb-4">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div
+            class="carousel-item"
+            *ngFor="let img of productImages; let i = index"
+            [class.active]="i === 0">
+            <img [src]="img" class="d-block w-100 rounded"
+              alt="Ảnh sản phẩm {{i+1}}" />
+          </div>
+        </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#productCarousel"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <!-- Thumbnail nhỏ -->
+      <div class="d-flex justify-content-center mt-3 gap-2">
+        <img
+          *ngFor="let img of productImages; let i = index"
+          [src]="img"
+          class="img-thumbnail"
+          style="width: 80px; cursor: pointer;"
+          data-bs-target="#productCarousel"
+          [attr.data-bs-slide-to]="i" />
+      </div>
+    </div>
+
+    <!-- Thông tin sản phẩm -->
+    <div class="col-lg-6">
+      <h4 class="fw-bold">{{ product.name }}</h4>
+      <div class="d-flex align-items-center mb-2">
+        <span class="text-warning me-2">★★★★★</span>
+        <small>0 đánh giá</small>
+      </div>
+      <h3 class="text-gold fw-bold">{{ product.price | currency:'VND' }}</h3>
+      <p class="text-gold">{{ product.gift }}</p>
+
+      <ul class="list-unstyled">
+        <li *ngFor="let feature of product.features">✔ {{ feature }}</li>
+      </ul>
+
+      <!-- Số lượng -->
+      <div class="d-flex align-items-center mb-3">
+        <label class="me-2 fw-bold">Số lượng:</label>
+        <div class="input-group" style="width: 120px;">
+          <button class="btn btn-outline-secondary"
+            (click)="decreaseQuantity()">-</button>
+          <input type="text" class="form-control text-center"
+            [(ngModel)]="quantity" />
+          <button class="btn btn-outline-secondary"
+            (click)="increaseQuantity()">+</button>
+        </div>
+      </div>
+
+      <!-- Nút mua -->
+      <div class="d-flex align-items-center">
+        <button class="btn btn-gold px-4 py-2">MUA NGAY</button>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <ul class="nav nav-tabs justify-content-center" id="productTab"
+      role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="specs-tab" data-bs-toggle="tab"
+          data-bs-target="#specs" type="button" role="tab">
+          Thông số kỹ thuật
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="features-tab" data-bs-toggle="tab"
+          data-bs-target="#features" type="button" role="tab">
+          Tính năng nổi bật
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="advantages-tab" data-bs-toggle="tab"
+          data-bs-target="#advantages" type="button" role="tab">
+          Các ưu điểm
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content mt-4" id="productTabContent">
+      <!-- Tab 1: Thông số kỹ thuật -->
+      <div class="tab-pane fade show active text-center" id="specs"
+        role="tabpanel">
+        <h4 class="fw-bold mb-3">Thông số kỹ thuật</h4>
+
+        <div class="table-responsive">
+          <table class="table table-bordered align-middle">
+            <tbody>
+              <tr>
+                <th class="bg-warning text-dark">Hệ điều hành</th>
+                <td>Android 9</td>
+              </tr>
+              <tr>
+                <th class="bg-light">Màn hình</th>
+                <td>Cảm ứng công nghệ IPS</td>
+              </tr>
+              <tr>
+                <th class="bg-light">Độ phân giải</th>
+                <td>FullHD</td>
+              </tr>
+              <tr>
+                <th class="bg-light">Chip</th>
+                <td>MTK8259</td>
+              </tr>
+              <tr>
+                <th class="bg-light">Bộ xử lý</th>
+                <td>Octa Core, ARM A53</td>
+              </tr>
+              <tr>
+                <th class="bg-light">Tần số</th>
+                <td>8 × 1.2GHz</td>
+              </tr>
+              <tr>
+                <th class="bg-light">MPU</th>
+                <td>64bit</td>
+              </tr>
+              <tr>
+                <th class="bg-light">GPU</th>
+                <td>Mali-T864</td>
+              </tr>
+              <tr>
+                <th class="bg-light">ROM</th>
+                <td>DDR3 4GB</td>
+              </tr>
+              <tr>
+                <th class="bg-light">RAM</th>
+                <td>EMMC 64GB</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tab 2: Tính năng nổi bật -->
+      <div class="tab-pane fade text-start" id="features" role="tabpanel">
+        <h4 class="fw-bold mb-3 text-center">Tính năng nổi bật của Màn hình DVD
+          Zestech Z800Pro</h4>
+        <div class="px-3">
+          <h6 class="fw-bold">2.1 Tích hợp 3 loại bản đồ thông minh</h6>
+          <p>Tích hợp tới 3 loại bản đồ thông minh gồm: Google Map, Vietmap và
+            Navitel cho phép người dùng sử dụng cả khi không có mạng.</p>
+
+          <h6 class="fw-bold">2.2 Giải trí đa phương tiện tiện dụng</h6>
+          <p>Màn hình cảm ứng 9 – 10 inch cho góc nhìn rõ nét. Zestech Z800 Pro
+            được trang bị tính năng hiện đại, độ phân giải FullHD, âm thanh DSP
+            16 kênh với 32 giải tần mang đến trải nghiệm âm thanh sống động. Màn
+            hình tích hợp sim 4G cho phép kết nối internet để dùng mượt mà
+            nhất.</p>
+
+          <h6 class="fw-bold">2.3 Tính năng Ra lệnh bằng giọng nói</h6>
+          <p>Chỉ với câu lệnh đơn giản, màn hình Zestech Z800 Pro tự động kết
+            nối cho bạn. Giúp lái xe an toàn, tiện ích hơn.</p>
+
+          <h6 class="fw-bold">2.4 Định vị xe từ xa ngay trên điện thoại</h6>
+          <p>Màn hình Zestech Z800Pro có thể định vị chính xác được vị trí của
+            xe bạn qua ứng dụng “Zestech Find My Car”. Người dùng có thể xem lại
+            lịch trình di chuyển trong vòng 1 năm.</p>
+
+          <h6 class="fw-bold">2.5 Thông báo phạt nguội qua tin nhắn, gọi
+            điện</h6>
+          <p>Người dùng có thể kiểm tra phạt nguội ngay trên màn hình Zestech
+            Z800Pro với câu lệnh cực kỳ đơn giản “Check phạt nguội + biển số
+            xe”.</p>
+
+          <h6 class="fw-bold">2.6 Chạy đa nhiệm ứng dụng</h6>
+          <p>Người dùng có thể chia đôi màn hình để vừa xem Youtube vừa tra bản
+            đồ cùng lúc.</p>
+
+          <h6 class="fw-bold">2.7 Các tính năng khác</h6>
+          <ul>
+            <li>Cảnh báo tốc độ, cảnh báo camera phạt nguội.</li>
+            <li>Hiển thị các thiết bị ngoại vi: camera hành trình, cảm biến áp
+              suất lốp,…</li>
+            <li>Âm thanh DSP 16 kênh với 32 giải tần.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab 3: Ưu điểm -->
+      <div class="tab-pane fade text-start" id="advantages" role="tabpanel">
+        <h4 class="fw-bold mb-3 text-center">Các ưu điểm của Màn hình Zestech
+          Z800Pro</h4>
+        <div class="px-3">
+          <p>✔ Thiết kế màn hình hiện đại, kích thước lớn.</p>
+          <p>✔ Công nghệ IPS chống chói, màu sắc trung thực, độ bền cao.</p>
+          <p>✔ Kính cường lực 2.5D chống trầy xước, hiển thị rõ nét.</p>
+          <p>✔ Đáp ứng tốt nhu cầu giải trí, chỉ đường, kết nối thông minh cho
+            người dùng.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

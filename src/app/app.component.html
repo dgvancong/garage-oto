@@ -1,0 +1,177 @@
+<!-- Topbar -->
+<div class="topbar normal-text position-relative">
+  <div class="container d-flex justify-content-end">
+    <span class="me-4"><i class="fa fa-phone"></i> 0123456789</span>
+    <span class="me-4"><i class="fa fa-clock"></i> Mở cửa: 7h30 -
+      17h30 (Thứ 2 - Chủ nhật)</span>
+    <span><i class="fa fa-map-marker-alt"></i> TP. Hồ Chí
+      Minh</span>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+  <div class="container">
+    <!-- Logo với background cách điệu -->
+    <div class="logo-box position-absolute d-flex align-items-center justify-content-center">
+      <a class="navbar-brand m-0" href="#">
+        <img src="https://placehold.co/300x110/0077cc/ffffff?text=360x146" alt="Logo" />
+      </a>
+    </div>
+
+    <!-- Button toggle on mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Trang chủ</a>
+        </li>
+        <li class="nav-item dropdown position-static">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Dịch vụ
+          </a>
+          <div class="dropdown-menu p-4 dropdown-menu-center w-50">
+            <div class="row">
+              <!-- Cột 1 -->
+              <div class="col-md-4">
+                <h6 class="fw-bold">BẢO DƯỠNG – SỬA
+                  CHỮA</h6>
+                <a class="dropdown-item" href="/pages/dan-ppf-oto">Quy
+                  trình dịch vụ sửa chữa chung</a>
+                <a class="dropdown-item" href="#">Bảo
+                  dưỡng định kỳ</a>
+                <a class="dropdown-item" href="#">Sửa
+                  chữa gầm máy</a>
+                <a class="dropdown-item" href="#">Sửa
+                  chữa điện lạnh</a>
+              </div>
+              <!-- Cột 2 -->
+              <div class="col-md-4">
+                <h6 class="fw-bold">ĐỒNG SƠN</h6>
+                <a class="dropdown-item" href="#">Quy
+                  trình dịch vụ đồng sơn</a>
+                <a class="dropdown-item" href="#">Dịch
+                  vụ sơn dặm vá</a>
+                <a class="dropdown-item" href="#">Sửa
+                  chữa đồng</a>
+              </div>
+              <!-- Cột 3 -->
+              <div class="col-md-4">
+                <h6 class="fw-bold">CHĂM SÓC XE – LÀM
+                  ĐẸP</h6>
+                <a class="dropdown-item" href="#">Quy
+                  trình bảo dưỡng nội thất</a>
+                <a class="dropdown-item" href="#">Chăm
+                  sóc ngoại thất</a>
+                <a class="dropdown-item" href="#">Chăm
+                  sóc khoang máy</a>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô tô</a></li>
+
+            <li><a class="dropdown-item" href="#">Lốp
+                xe</a></li>
+            <li><a class="dropdown-item" href="#">Dầu nhớt &
+                chất bôi trơn</a></li>
+            <li><a class="dropdown-item" href="#">Ắc
+                quy</a></li>
+            <li><a class="dropdown-item" href="#">Đèn &
+                chiếu sáng</a></li>
+            <li><a class="dropdown-item" href="#">Nội thất ô
+                tô</a></li>
+            <li><a class="dropdown-item" href="#">Phụ kiện
+                điện tử</a></li>
+            <li><a class="dropdown-item" href="#">Camera
+                hành trình</a></li>
+            <li><a class="dropdown-item" href="#">Nước làm
+                mát</a></li>
+            <li><a class="dropdown-item" href="#">Khác...</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="#" (click)="scrollToFooter($event)">Tin
+            tức</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" (click)="scrollToFooter($event)">Liên
+            hệ</a></li>
+      </ul>
+
+      <!-- Icons + Button -->
+      <div class="navbar-icons d-flex align-items-center">
+        <a href="#" class="btn btn-book ms-3">
+          Đặt lịch
+          <i class="fa fa-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<!-- Back to Top Button -->
+<a href="#" class="back-to-top" *ngIf="isVisible" (click)="scrollToTop($event)">
+  <i class="fa fa-chevron-up"></i>
+</a>
+
+
+<!-- Footer -->
+<footer id="footer" class="footer bg-dark text-light pt-5 pb-4">
+  <div class="container">
+    <div class="row">
+      <!-- Cột 1: Thông tin -->
+      <div class="col-md-4 mb-4">
+        <h5 class="fw-bold text-uppercase mb-3">Toyota Trần Hưng
+          Đạo</h5>
+        <p>
+          Toyota Trần Hưng Đạo, Q1 - Đại Lý Ủy Quyền Toyota
+          Việt Nam. <br>
+          <strong>Showroom 2:</strong> Võ Văn Kiệt, Q1, TP.HCM
+        </p>
+        <p><strong>Hotline Phụ Trách Kinh Doanh:</strong> 09 22
+          99 8666</p>
+
+        <!-- Icons -->
+        <div class="d-flex">
+          <a href="#" class="footer-icon"><i class="fa fa-facebook text-white"></i></a>
+          <a href="#" class="footer-icon"><i class="fa fa-envelope text-white"></i></a>
+          <a href="#" class="footer-icon"><i class="fa fa-phone text-white"></i></a>
+        </div>
+      </div>
+
+      <!-- Cột 2: Dịch vụ -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Dịch vụ</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Bảo hành</a></li>
+          <li><a href="#">Bảo dưỡng</a></li>
+          <li><a href="#">Sửa chữa chung</a></li>
+          <li><a href="#">Kiểm tra / Triệu hồi</a></li>
+          <li><a href="#">Phụ tùng / Phụ kiện</a></li>
+        </ul>
+      </div>
+
+      <!-- Cột 3: Công cụ hỗ trợ -->
+      <div class="col-md-4 mb-4">
+        <h6 class="fw-bold text-uppercase mb-3">Công cụ hỗ
+          trợ</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">So sánh sản phẩm</a></li>
+          <li><a href="#">Dự toán chi phí</a></li>
+          <li><a href="#">Hỗ trợ tài chính</a></li>
+          <li><a href="#">Đăng ký lái thử</a></li>
+          <li><a href="#">Đặt lịch hẹn dịch vụ</a></li>
+          <li><a href="#">Tải catalogue</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
