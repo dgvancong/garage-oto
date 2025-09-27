@@ -239,3 +239,27 @@
 .social-fixed .social-icon:hover {
   transform: scale(1.1);
 }
+
+/* Tăng thời gian chuyển động offcanvas */
+.offcanvas {
+  transition: transform 0.3s ease-in-out !important; // mặc định 0.3s
+}
+
+/* Nếu muốn thêm fade mượt hơn */
+.offcanvas.show {
+  opacity: 1;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out !important;
+}
+
+.offcanvas {
+  opacity: 0;
+}
+
+.offcanvas.offcanvas-start {
+  transform: translateX(-100%);
+}
+
+.offcanvas.show.offcanvas-start {
+  transform: translateX(0);
+  opacity: 1;
+}

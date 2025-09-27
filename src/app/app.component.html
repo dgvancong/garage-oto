@@ -2,40 +2,45 @@
 <div class="topbar normal-text position-relative">
   <div class="container d-flex justify-content-end">
     <span class="me-4"><i class="fa fa-phone"></i> 0123456789</span>
-    <span class="me-4"><i class="fa fa-clock"></i> Mở cửa: 7h30 -
-      17h30 (Thứ 2 - Chủ nhật)</span>
-    <span><i class="fa fa-map-marker-alt"></i> TP. Hồ Chí
-      Minh</span>
+    <span class="me-4"><i class="fa fa-clock"></i> Mở cửa: 7h30 - 17h30 (Thứ 2 -
+      Chủ nhật)</span>
+    <span><i class="fa fa-map-marker-alt"></i> TP. Hồ Chí Minh</span>
   </div>
 </div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
   <div class="container">
-    <!-- Logo -->
+    <!-- Logo với background cách điệu -->
     <div
       class="logo-box position-absolute d-flex align-items-center justify-content-center">
       <a class="navbar-brand m-0" href="#">
-        <img src="https://placehold.co/300x110/0077cc/ffffff?text=360x146"
+        <img
+          src="https://placehold.co/300x110/0077cc/ffffff?text=360x146"
           alt="Logo" />
       </a>
     </div>
 
-    <!-- Toggle button (mobile) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+    <!-- Toggle button for offcanvas -->
+    <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      data-bs-toggle="offcanvas"
       data-bs-target="#offcanvasNav"
       aria-controls="offcanvasNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu desktop -->
-    <div class="collapse navbar-collapse d-none d-lg-block" id="mainNav">
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
           <a class="nav-link active" href="#">Trang chủ</a>
         </li>
         <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle" href="#"
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
             data-bs-toggle="dropdown">
             Dịch vụ
           </a>
@@ -72,11 +77,15 @@
           <a class="nav-link dropdown-toggle" href="#"
             data-bs-toggle="dropdown">Sản phẩm</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô
-                tô</a></li>
+            <li>
+              <a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô
+                tô</a>
+            </li>
+
             <li><a class="dropdown-item" href="#">Lốp xe</a></li>
-            <li><a class="dropdown-item" href="#">Dầu nhớt & chất bôi
-                trơn</a></li>
+            <li>
+              <a class="dropdown-item" href="#">Dầu nhớt & chất bôi trơn</a>
+            </li>
             <li><a class="dropdown-item" href="#">Ắc quy</a></li>
             <li><a class="dropdown-item" href="#">Đèn & chiếu sáng</a></li>
             <li><a class="dropdown-item" href="#">Nội thất ô tô</a></li>
@@ -86,8 +95,15 @@
             <li><a class="dropdown-item" href="#">Khác...</a></li>
           </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="scrollToFooter($event)">Tin
+            tức</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="scrollToFooter($event)">Liên
+            hệ</a>
+        </li>
       </ul>
 
       <!-- Icons + Button -->
@@ -102,76 +118,92 @@
 </nav>
 
 <!-- Offcanvas menu (Mobile) -->
-<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1"
-  id="offcanvasNav"
-  aria-labelledby="offcanvasNavLabel">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title fw-bold" id="offcanvasNavLabel">Menu</h5>
-    <button type="button" class="btn-close btn-close-white"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"></button>
+    <h5 class="offcanvas-title">Menu</h5>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
     <ul class="navbar-nav">
-      <li class="nav-item"><a class="nav-link text-white" href="#">Trang
-          chủ</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Trang chủ</a></li>
 
-      <!-- Dropdown dịch vụ -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#"
-          id="dropdownDichVu" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">Dịch vụ</a>
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="/pages/dan-ppf-oto">Quy trình dịch
-              vụ sửa chữa chung</a></li>
-          <li><a class="dropdown-item" href="#">Bảo dưỡng định kỳ</a></li>
-          <li><a class="dropdown-item" href="#">Sửa chữa gầm máy</a></li>
-          <li><a class="dropdown-item" href="#">Sửa chữa điện lạnh</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Quy trình dịch vụ đồng
-              sơn</a></li>
-          <li><a class="dropdown-item" href="#">Dịch vụ sơn dặm vá</a></li>
-          <li><a class="dropdown-item" href="#">Sửa chữa đồng</a></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="#">Quy trình bảo dưỡng nội
-              thất</a></li>
-          <li><a class="dropdown-item" href="#">Chăm sóc ngoại thất</a></li>
-          <li><a class="dropdown-item" href="#">Chăm sóc khoang máy</a></li>
-        </ul>
+      <!-- Accordion cho dịch vụ -->
+      <li class="nav-item">
+        <div class="accordion" id="accordionMobile">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading1">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+                aria-expanded="false"
+                aria-controls="collapse1">
+                Dịch vụ
+              </button>
+            </h2>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                <a class="dropdown-item" href="#">Quy trình dịch vụ sửa chữa
+                  chung</a>
+                <a class="dropdown-item" href="#">Bảo dưỡng định kỳ</a>
+                <a class="dropdown-item" href="#">Sửa chữa gầm máy</a>
+                <a class="dropdown-item" href="#">Sửa chữa điện lạnh</a>
+                <hr />
+                <a class="dropdown-item" href="#">Đồng sơn</a>
+                <a class="dropdown-item" href="#">Sơn dặm vá</a>
+                <a class="dropdown-item" href="#">Sửa chữa đồng</a>
+                <hr />
+                <a class="dropdown-item" href="#">Nội thất</a>
+                <a class="dropdown-item" href="#">Ngoại thất</a>
+                <a class="dropdown-item" href="#">Khoang máy</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion cho sản phẩm -->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="heading2">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                aria-expanded="false"
+                aria-controls="collapse2">
+                Sản phẩm
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionMobile">
+              <div class="accordion-body">
+                <a class="dropdown-item" href="#">Phụ tùng ô tô</a>
+                <a class="dropdown-item" href="#">Lốp xe</a>
+                <a class="dropdown-item" href="#">Dầu nhớt & chất bôi trơn</a>
+                <a class="dropdown-item" href="#">Ắc quy</a>
+                <a class="dropdown-item" href="#">Đèn & chiếu sáng</a>
+                <a class="dropdown-item" href="#">Nội thất ô tô</a>
+                <a class="dropdown-item" href="#">Phụ kiện điện tử</a>
+                <a class="dropdown-item" href="#">Camera hành trình</a>
+                <a class="dropdown-item" href="#">Nước làm mát</a>
+                <a class="dropdown-item" href="#">Khác...</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </li>
 
-      <!-- Dropdown sản phẩm -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle text-white" href="#"
-          id="dropdownSanPham" role="button"
-          data-bs-toggle="dropdown" aria-expanded="false">Sản phẩm</a>
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô
-              tô</a></li>
-          <li><a class="dropdown-item" href="#">Lốp xe</a></li>
-          <li><a class="dropdown-item" href="#">Dầu nhớt & chất bôi
-              trơn</a></li>
-          <li><a class="dropdown-item" href="#">Ắc quy</a></li>
-          <li><a class="dropdown-item" href="#">Đèn & chiếu sáng</a></li>
-          <li><a class="dropdown-item" href="#">Nội thất ô tô</a></li>
-          <li><a class="dropdown-item" href="#">Phụ kiện điện tử</a></li>
-          <li><a class="dropdown-item" href="#">Camera hành trình</a></li>
-          <li><a class="dropdown-item" href="#">Nước làm mát</a></li>
-          <li><a class="dropdown-item" href="#">Khác...</a></li>
-        </ul>
-      </li>
-
-      <li class="nav-item"><a class="nav-link text-white" href="#">Tin
-          tức</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="#">Liên
-          hệ</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
     </ul>
-
-    <div class="mt-4">
-      <a href="#" class="btn btn-warning w-100">
-        Đặt lịch <i class="fa fa-arrow-right ms-1"></i>
-      </a>
-    </div>
   </div>
 </div>
 
@@ -181,26 +213,30 @@
   <a href="https://zalo.me/yourid" target="_blank" class="social-icon">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
-      alt="Zalo">
+      alt="Zalo" />
   </a>
   <!-- Facebook -->
   <a href="https://facebook.com/yourid" target="_blank" class="social-icon">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/50px-2023_Facebook_icon.svg.png"
-      alt="Facebook">
+      alt="Facebook" />
   </a>
   <!-- Messenger -->
   <a href="https://m.me/yourid" target="_blank" class="social-icon">
     <img
       src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Messenger_logo_2018.svg"
-      alt="Messenger">
+      alt="Messenger" />
   </a>
 </div>
 
 <router-outlet></router-outlet>
 
 <!-- Back to Top Button -->
-<a href="#" class="back-to-top" *ngIf="isVisible" (click)="scrollToTop($event)">
+<a
+  href="#"
+  class="back-to-top"
+  *ngIf="isVisible"
+  (click)="scrollToTop($event)">
   <i class="fa fa-chevron-up"></i>
 </a>
 
@@ -210,15 +246,12 @@
     <div class="row">
       <!-- Cột 1: Thông tin -->
       <div class="col-md-4 mb-4">
-        <h5 class="fw-bold text-uppercase mb-3">Toyota Trần Hưng
-          Đạo</h5>
+        <h5 class="fw-bold text-uppercase mb-3">Toyota Trần Hưng Đạo</h5>
         <p>
-          Toyota Trần Hưng Đạo, Q1 - Đại Lý Ủy Quyền Toyota
-          Việt Nam. <br>
+          Toyota Trần Hưng Đạo, Q1 - Đại Lý Ủy Quyền Toyota Việt Nam. <br />
           <strong>Showroom 2:</strong> Võ Văn Kiệt, Q1, TP.HCM
         </p>
-        <p><strong>Hotline Phụ Trách Kinh Doanh:</strong> 09 22
-          99 8666</p>
+        <p><strong>Hotline Phụ Trách Kinh Doanh:</strong> 09 22 99 8666</p>
 
         <!-- Icons -->
         <div class="d-flex">
@@ -245,8 +278,7 @@
 
       <!-- Cột 3: Công cụ hỗ trợ -->
       <div class="col-md-4 mb-4">
-        <h6 class="fw-bold text-uppercase mb-3">Công cụ hỗ
-          trợ</h6>
+        <h6 class="fw-bold text-uppercase mb-3">Công cụ hỗ trợ</h6>
         <ul class="list-unstyled">
           <li><a href="#">So sánh sản phẩm</a></li>
           <li><a href="#">Dự toán chi phí</a></li>
