@@ -10,98 +10,84 @@
 </div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+<nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
   <div class="container">
-    <!-- Logo với background cách điệu -->
-    <div class="logo-box position-absolute d-flex align-items-center justify-content-center">
+    <!-- Logo -->
+    <div
+      class="logo-box position-absolute d-flex align-items-center justify-content-center">
       <a class="navbar-brand m-0" href="#">
-        <img src="https://placehold.co/300x110/0077cc/ffffff?text=360x146" alt="Logo" />
+        <img src="https://placehold.co/300x110/0077cc/ffffff?text=360x146"
+          alt="Logo" />
       </a>
     </div>
 
-    <!-- Button toggle on mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+    <!-- Toggle button (mobile) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNav"
+      aria-controls="offcanvasNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu -->
-    <div class="collapse navbar-collapse" id="mainNav">
+    <!-- Menu desktop -->
+    <div class="collapse navbar-collapse d-none d-lg-block" id="mainNav">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item">
           <a class="nav-link active" href="#">Trang chủ</a>
         </li>
         <li class="nav-item dropdown position-static">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle" href="#"
+            data-bs-toggle="dropdown">
             Dịch vụ
           </a>
           <div class="dropdown-menu p-4 dropdown-menu-center w-50">
             <div class="row">
               <!-- Cột 1 -->
               <div class="col-md-4">
-                <h6 class="fw-bold">BẢO DƯỠNG – SỬA
-                  CHỮA</h6>
-                <a class="dropdown-item" href="/pages/dan-ppf-oto">Quy
-                  trình dịch vụ sửa chữa chung</a>
-                <a class="dropdown-item" href="#">Bảo
-                  dưỡng định kỳ</a>
-                <a class="dropdown-item" href="#">Sửa
-                  chữa gầm máy</a>
-                <a class="dropdown-item" href="#">Sửa
-                  chữa điện lạnh</a>
+                <h6 class="fw-bold">BẢO DƯỠNG – SỬA CHỮA</h6>
+                <a class="dropdown-item" href="/pages/dan-ppf-oto">Quy trình
+                  dịch vụ sửa chữa chung</a>
+                <a class="dropdown-item" href="#">Bảo dưỡng định kỳ</a>
+                <a class="dropdown-item" href="#">Sửa chữa gầm máy</a>
+                <a class="dropdown-item" href="#">Sửa chữa điện lạnh</a>
               </div>
               <!-- Cột 2 -->
               <div class="col-md-4">
                 <h6 class="fw-bold">ĐỒNG SƠN</h6>
-                <a class="dropdown-item" href="#">Quy
-                  trình dịch vụ đồng sơn</a>
-                <a class="dropdown-item" href="#">Dịch
-                  vụ sơn dặm vá</a>
-                <a class="dropdown-item" href="#">Sửa
-                  chữa đồng</a>
+                <a class="dropdown-item" href="#">Quy trình dịch vụ đồng sơn</a>
+                <a class="dropdown-item" href="#">Dịch vụ sơn dặm vá</a>
+                <a class="dropdown-item" href="#">Sửa chữa đồng</a>
               </div>
               <!-- Cột 3 -->
               <div class="col-md-4">
-                <h6 class="fw-bold">CHĂM SÓC XE – LÀM
-                  ĐẸP</h6>
-                <a class="dropdown-item" href="#">Quy
-                  trình bảo dưỡng nội thất</a>
-                <a class="dropdown-item" href="#">Chăm
-                  sóc ngoại thất</a>
-                <a class="dropdown-item" href="#">Chăm
-                  sóc khoang máy</a>
+                <h6 class="fw-bold">CHĂM SÓC XE – LÀM ĐẸP</h6>
+                <a class="dropdown-item" href="#">Quy trình bảo dưỡng nội
+                  thất</a>
+                <a class="dropdown-item" href="#">Chăm sóc ngoại thất</a>
+                <a class="dropdown-item" href="#">Chăm sóc khoang máy</a>
               </div>
             </div>
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Sản phẩm</a>
+          <a class="nav-link dropdown-toggle" href="#"
+            data-bs-toggle="dropdown">Sản phẩm</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô tô</a></li>
-
-            <li><a class="dropdown-item" href="#">Lốp
-                xe</a></li>
-            <li><a class="dropdown-item" href="#">Dầu nhớt &
-                chất bôi trơn</a></li>
-            <li><a class="dropdown-item" href="#">Ắc
-                quy</a></li>
-            <li><a class="dropdown-item" href="#">Đèn &
-                chiếu sáng</a></li>
-            <li><a class="dropdown-item" href="#">Nội thất ô
+            <li><a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô
                 tô</a></li>
-            <li><a class="dropdown-item" href="#">Phụ kiện
-                điện tử</a></li>
-            <li><a class="dropdown-item" href="#">Camera
-                hành trình</a></li>
-            <li><a class="dropdown-item" href="#">Nước làm
-                mát</a></li>
+            <li><a class="dropdown-item" href="#">Lốp xe</a></li>
+            <li><a class="dropdown-item" href="#">Dầu nhớt & chất bôi
+                trơn</a></li>
+            <li><a class="dropdown-item" href="#">Ắc quy</a></li>
+            <li><a class="dropdown-item" href="#">Đèn & chiếu sáng</a></li>
+            <li><a class="dropdown-item" href="#">Nội thất ô tô</a></li>
+            <li><a class="dropdown-item" href="#">Phụ kiện điện tử</a></li>
+            <li><a class="dropdown-item" href="#">Camera hành trình</a></li>
+            <li><a class="dropdown-item" href="#">Nước làm mát</a></li>
             <li><a class="dropdown-item" href="#">Khác...</a></li>
           </ul>
         </li>
-
-        <li class="nav-item"><a class="nav-link" href="#" (click)="scrollToFooter($event)">Tin
-            tức</a></li>
-        <li class="nav-item"><a class="nav-link" href="#" (click)="scrollToFooter($event)">Liên
-            hệ</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Tin tức</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Liên hệ</a></li>
       </ul>
 
       <!-- Icons + Button -->
@@ -115,11 +101,87 @@
   </div>
 </nav>
 
+<!-- Offcanvas menu (Mobile) -->
+<div class="offcanvas offcanvas-start bg-dark text-white" tabindex="-1"
+  id="offcanvasNav"
+  aria-labelledby="offcanvasNavLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title fw-bold" id="offcanvasNavLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link text-white" href="#">Trang
+          chủ</a></li>
+
+      <!-- Dropdown dịch vụ -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#"
+          id="dropdownDichVu" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">Dịch vụ</a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="/pages/dan-ppf-oto">Quy trình dịch
+              vụ sửa chữa chung</a></li>
+          <li><a class="dropdown-item" href="#">Bảo dưỡng định kỳ</a></li>
+          <li><a class="dropdown-item" href="#">Sửa chữa gầm máy</a></li>
+          <li><a class="dropdown-item" href="#">Sửa chữa điện lạnh</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Quy trình dịch vụ đồng
+              sơn</a></li>
+          <li><a class="dropdown-item" href="#">Dịch vụ sơn dặm vá</a></li>
+          <li><a class="dropdown-item" href="#">Sửa chữa đồng</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">Quy trình bảo dưỡng nội
+              thất</a></li>
+          <li><a class="dropdown-item" href="#">Chăm sóc ngoại thất</a></li>
+          <li><a class="dropdown-item" href="#">Chăm sóc khoang máy</a></li>
+        </ul>
+      </li>
+
+      <!-- Dropdown sản phẩm -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle text-white" href="#"
+          id="dropdownSanPham" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">Sản phẩm</a>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" href="/pages/manhinh-oto">Phụ tùng ô
+              tô</a></li>
+          <li><a class="dropdown-item" href="#">Lốp xe</a></li>
+          <li><a class="dropdown-item" href="#">Dầu nhớt & chất bôi
+              trơn</a></li>
+          <li><a class="dropdown-item" href="#">Ắc quy</a></li>
+          <li><a class="dropdown-item" href="#">Đèn & chiếu sáng</a></li>
+          <li><a class="dropdown-item" href="#">Nội thất ô tô</a></li>
+          <li><a class="dropdown-item" href="#">Phụ kiện điện tử</a></li>
+          <li><a class="dropdown-item" href="#">Camera hành trình</a></li>
+          <li><a class="dropdown-item" href="#">Nước làm mát</a></li>
+          <li><a class="dropdown-item" href="#">Khác...</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link text-white" href="#">Tin
+          tức</a></li>
+      <li class="nav-item"><a class="nav-link text-white" href="#">Liên
+          hệ</a></li>
+    </ul>
+
+    <div class="mt-4">
+      <a href="#" class="btn btn-warning w-100">
+        Đặt lịch <i class="fa fa-arrow-right ms-1"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
 <!-- Floating Social Icons -->
 <div class="social-fixed">
   <!-- Zalo -->
   <a href="https://zalo.me/yourid" target="_blank" class="social-icon">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg"
+      alt="Zalo">
   </a>
   <!-- Facebook -->
   <a href="https://facebook.com/yourid" target="_blank" class="social-icon">
@@ -129,7 +191,9 @@
   </a>
   <!-- Messenger -->
   <a href="https://m.me/yourid" target="_blank" class="social-icon">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Messenger_logo_2018.svg" alt="Messenger">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Messenger_logo_2018.svg"
+      alt="Messenger">
   </a>
 </div>
 
@@ -139,7 +203,6 @@
 <a href="#" class="back-to-top" *ngIf="isVisible" (click)="scrollToTop($event)">
   <i class="fa fa-chevron-up"></i>
 </a>
-
 
 <!-- Footer -->
 <footer id="footer" class="footer bg-dark text-light pt-5 pb-4">
@@ -159,9 +222,12 @@
 
         <!-- Icons -->
         <div class="d-flex">
-          <a href="#" class="footer-icon"><i class="fa fa-facebook text-white"></i></a>
-          <a href="#" class="footer-icon"><i class="fa fa-envelope text-white"></i></a>
-          <a href="#" class="footer-icon"><i class="fa fa-phone text-white"></i></a>
+          <a href="#" class="footer-icon"><i
+              class="fa fa-facebook text-white"></i></a>
+          <a href="#" class="footer-icon"><i
+              class="fa fa-envelope text-white"></i></a>
+          <a href="#" class="footer-icon"><i
+              class="fa fa-phone text-white"></i></a>
         </div>
       </div>
 
